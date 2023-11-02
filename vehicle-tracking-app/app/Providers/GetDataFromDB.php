@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class CarClass extends ServiceProvider
+class GetDataFromDB extends ServiceProvider
 {
     protected $res;
     protected $len;
