@@ -12,10 +12,10 @@
     </head>
     <body>
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
-            <div class="container"><a class="navbar-brand" href="#">Evidenta Autovehicule</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="/">Evidenta Autovehicule</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Vehicul nou</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="./adauga-vehicul">Vehicul nou</a></li>
                     </ul>
                 </div>
             </div>

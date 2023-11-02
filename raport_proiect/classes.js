@@ -1,6 +1,6 @@
 var classes = [
     {
-        "name": "anonymous@000000000000057a0000000000000000",
+        "name": "anonymous@000000000000051d0000000000000000",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -73,7 +73,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "anonymous@00000000000005840000000000000000",
+        "name": "anonymous@00000000000005110000000000000000",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -146,7 +146,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "anonymous@000000000000058b0000000000000000",
+        "name": "anonymous@000000000000058d0000000000000000",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -219,7 +219,7 @@ var classes = [
         "violations": {}
     },
     {
-        "name": "anonymous@000000000000053c0000000000000000",
+        "name": "anonymous@000000000000056d0000000000000000",
         "interface": false,
         "abstract": false,
         "final": false,
@@ -1256,6 +1256,159 @@ var classes = [
         "totalDataComplexity": 0,
         "totalSystemComplexity": 1,
         "package": "App\\Exceptions\\",
+        "pageRank": 0.04,
+        "afferentCoupling": 0,
+        "efferentCoupling": 1,
+        "instability": 1,
+        "violations": {}
+    },
+    {
+        "name": "App\\Providers\\CarClass",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "__construct",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getLen",
+                "role": "getter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getId",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getTip",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getMarca",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getModel",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getDateTehnice",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getAlteCaracteristici",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getNumarDeInmatriculare",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getDataInmatriculare",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getProprietar",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getDataUltimITP",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getImagine",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "boot",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 14,
+        "nbMethods": 13,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 13,
+        "nbMethodsGetter": 1,
+        "nbMethodsSetters": 0,
+        "wmc": 13,
+        "ccn": 1,
+        "ccnMethodMax": 1,
+        "externals": [
+            "Illuminate\\Support\\ServiceProvider"
+        ],
+        "parents": [
+            "Illuminate\\Support\\ServiceProvider"
+        ],
+        "implements": [],
+        "lcom": 2,
+        "length": 53,
+        "vocabulary": 5,
+        "volume": 123.06,
+        "difficulty": 13,
+        "effort": 1599.81,
+        "level": 0.08,
+        "bugs": 0.04,
+        "time": 89,
+        "intelligentContent": 9.47,
+        "number_operators": 14,
+        "number_operands": 39,
+        "number_operators_unique": 2,
+        "number_operands_unique": 3,
+        "cloc": 0,
+        "loc": 62,
+        "lloc": 62,
+        "mi": 46.13,
+        "mIwoC": 46.13,
+        "commentWeight": 0,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 0,
+        "relativeDataComplexity": 12.86,
+        "relativeSystemComplexity": 12.86,
+        "totalStructuralComplexity": 0,
+        "totalDataComplexity": 180,
+        "totalSystemComplexity": 180,
+        "package": "App\\Providers\\",
         "pageRank": 0.04,
         "afferentCoupling": 0,
         "efferentCoupling": 1,

@@ -7,121 +7,58 @@
             <div class="input-group-append"><button class="btn btn-light" type="button" style="background: #D4D4D4;">Cauta </button></div>
             
         </div>
-        <input type="checkbox">&nbsp;Numar inmatriculare&nbsp;</input>
-        <input type="checkbox">&nbsp;Nume proprietar</input>
+        <input type="radio" name="group1">&nbsp;Numar inmatriculare&nbsp;
+        <input type="radio" name = "group1"
+        >&nbsp;Nume proprietar
     </form>
     <div class="row product-list dev">
-        <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
-            <div class="product-container">
-                <div class="row">
-                    <div class="col-md-12"><a href="#" class="product-image"><img src="/imgs/qV2oNZWfZTQQBxFes7DS7P.jpg" /></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <h2><a href="#">Voalva XC90X</a></h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="product-description">
-                            <ul>
-                                <li>Tip autovehicul: </li>
-                                <li>Marca: </li>
-                                <li>Date tehnice: </li>
-                                <li>Alte caracteristici: </li>
-                                <li>Numar de inmatriculare: </li>
-                                <li>Data inmatricularii: </li>
-                                <li>Proprietarul: </li>
-                                <li> Data ultimei revizii tehnice: </li>
-                            </ul>
-                        </p>
-                        <div class="row">
-                            <div class="col-6"><button class="btn btn-light" type="button">Editeaza</button></div>
-                            <div class="col-6"><button class="btn btn-light" type="button" style="float: right; background: #BA2A2A;">Sterge</button></div>
+            @php
+                $var = $carclassobj;
+            @endphp
+
+            <?php
+                for($id = 0; $id < $var->getLen(); $id++)
+                {
+            ?>
+                    <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
+                        <div class="product-container">
+                            <div class="row">
+                                <div class="col-md-12"><a href="#" class="product-image"><img src=<?php echo $var->getImagine($id); ?> /></a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <h2><a href="#"><?php echo $var->getMarca($id) . ' ' . $var->getModel($id); ?></a></h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="product-description">
+                                        <ul>
+                                            <li>Tip autovehicul: <?php echo $var->getTip($id); ?></li>
+                                            <li>Marca: <?php echo $var->getMarca($id); ?></li>
+                                            <li>Model: <?php echo $var->getModel($id); ?></li>
+                                            <li>Date tehnice: <?php echo $var->getDateTehnice($id); ?></li>
+                                            <li>Alte caracteristici: <?php echo $var->getAlteCaracteristici($id); ?></li>
+                                            <li>Numar de inmatriculare: <?php echo $var->getNumarDeInmatriculare($id); ?></li>
+                                            <li>Data inmatricularii: <?php echo $var->getDataInmatriculare($id); ?></li>
+                                            <li>Proprietarul: <?php echo $var->getProprietar($id); ?></li>
+                                            <li> Data ultimei revizii tehnice: <?php echo $var->getDataUltimITP($id); ?></li>
+                                        </ul>
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-6"><button class="btn btn-light" type="button">Editeaza</button></div>
+                                        <div class="col-6"><button class="btn btn-light" type="button" style="float: right; background: #BA2A2A;">Sterge</button></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
-                </div>
-            </div>
-        </div>
+            <?php
 
-        <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
-            <div class="product-container">
-                <div class="row">
-                    <div class="col-md-12"><a href="#" class="product-image"><img src="/imgs/qV2oNZWfZTQQBxFes7DS7P.jpg" /></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <h2><a href="#">Voalva XC90X</a></h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="product-description">
-                            <ul>
-                                <li>Tip autovehicul: </li>
-                                <li>Marca: </li>
-                                <li>Date tehnice: </li>
-                                <li>Alte caracteristici: </li>
-                                <li>Numar de inmatriculare: </li>
-                                <li>Data inmatricularii: </li>
-                                <li>Proprietarul: </li>
-                                <li> Data ultimei revizii tehnice: </li>
-                            </ul>
-                        </p>
-                        <div class="row">
-                            <div class="col-6"><button class="btn btn-light" type="button">Editeaza</button></div>
-                            <div class="col-6"><button class="btn btn-light" type="button" style="float: right; background: #BA2A2A;">Sterge</button></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
-            <div class="product-container">
-                <div class="row">
-                    <div class="col-md-12"><a href="#" class="product-image"><img src="/imgs/qV2oNZWfZTQQBxFes7DS7P.jpg" /></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <h2><a href="#">Voalva XC90X</a></h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="product-description">
-                            <ul>
-                                <li>Tip autovehicul: </li>
-                                <li>Marca: </li>
-                                <li>Date tehnice: </li>
-                                <li>Alte caracteristici: </li>
-                                <li>Numar de inmatriculare: </li>
-                                <li>Data inmatricularii: </li>
-                                <li>Proprietarul: </li>
-                                <li> Data ultimei revizii tehnice: </li>
-                            </ul>
-                        </p>
-                        <div class="row">
-                            <div class="col-6"><button class="btn btn-light" type="button">Editeaza</button></div>
-                            <div class="col-6"><button class="btn btn-light" type="button" style="float: right; background: #BA2A2A;">Sterge</button></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+                }
+            ?>
         </div>
     </div>
 </div>
-<footer class="py-5 bg-black">
-    <div class="container">
-        <p class="text-center text-white m-0 small">Copyright&nbsp;© Evidenta Autovehicule 2023</p>
-    </div>
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
-<script src="/js/script.min.js"></script>
-</body>
 
-</html>
+@include('footer')

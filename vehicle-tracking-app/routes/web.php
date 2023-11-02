@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Providers\CarClass;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function ($page = 'index') {
-    return view('index')->withTitle('Evidenta Autovehicule - Pagina Principala');
+    $carclassobj = new CarClass(DB::table('date_masini')->select('*')->get());
+    return view('index', compact('carclassobj'))->withTitle('Evidenta Autovehicule - Pagina Principala');
 });
 
-/* Route::get('/register', function () {
-    return view('register')->withTitle("Registration Page");
-});*/
+Route::get('/adauga-vehicul', function () {
+    return view('adauga-vehicul')->withTitle("Adaugare vehicul nou");
+});
