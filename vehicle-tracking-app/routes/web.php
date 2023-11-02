@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function ($page = 'index') {
+    return view('index')->withTitle('Evidenta Autovehicule - Pagina Principala');
 });
+
+/* Route::get('/register', function () {
+    return view('register')->withTitle("Registration Page");
+});*/
