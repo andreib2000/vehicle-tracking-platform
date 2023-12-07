@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Providers\GetDataFromDB;
+use App\Providers\NewCode\GetDataFromDB;
 use App\Http\Controllers\HandleForm;
+use App\Http\Controllers\NewCode\ActionsInApp;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +16,23 @@ use App\Http\Controllers\HandleForm;
 |
 */
 
-Route::get('/', function ($page = 'index') {
+Route::get('/', function () {
+    $carclassobj = new GetDataFromDB(DB::table('date_masini')->select('*')->get());
+    return view('index', compact('carclassobj'))->withTitle('Evidenta Autovehicule - Pagina Principala');
+})->name("index");
+
+Route::get('/index', function () {
     $carclassobj = new GetDataFromDB(DB::table('date_masini')->select('*')->get());
     return view('index', compact('carclassobj'))->withTitle('Evidenta Autovehicule - Pagina Principala');
 });
 
 Route::get('/adauga-vehicul', function () {
-    return view('/adauga-vehicul')->withTitle("Adaugare vehicul nou");
+    return view('/adauga-vehicul', ['ok'=>-1])->withTitle("Adaugare vehicul nou");
 });
 
 Route::post('/store', [HandleForm::class, 'store']);
+
+Route::get('/sterge/{var}', [ActionsInApp::class, 'deleteEntry']);
+Route::get('/editeaza/{var}', [ActionsInApp::class, 'editEntry']);
+
+Route::post('/search', [SearchHandler::class, 'config']);

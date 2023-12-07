@@ -6,13 +6,15 @@
         @csrf
         <div class=form-group><label for="tip_autoturism">Tip Autovehicul</label>
             <select class="custom-select" name="tip_autoturism" id="tip_autoturism">
-                <option value="1">Autoturism</option>
-                <option value="2">Autoutilitara</option>
+                <option value="autoturism">Autoturism</option>
+                <option value="autoutilitara">Autoutilitara</option>
             </select>
         </div>
 
         <div class="form-group"><label for="marca">Marca</label><input class="form-control" type="text" name="marca" id="marca" /></div>
         <div class="form-group"><label for="model">Model</label><input class="form-control" type="text" name="model" id="model" /></div>
+        <div class="form-group"><label for="imagine">Imagine</label><input class="form-control" type="text" name="imagine" id="imagine" /></div>
+        <div class="form-group"><label for="numar_inmatriculare">Numar de inmatriculare</label><input class="form-control" type="text" name="numar_inmatriculare" id="numar_inmatriculare" /></div>
 
         <div class="form-group"><label for="date_tehnice">Date tehnice </label><textarea class="form-control" name="date_tehnice" id="date_tehnice"></textarea></div>
         <div class="form-group"><label for="alte_caracteristici">Alte caracteristici </label><textarea class="form-control" name="alte_caracteristici" id="alte_caracteristici"></textarea></div>
@@ -24,4 +26,23 @@
     </form>
 </div>
 
+@php
+    $popup = $ok;
+@endphp
+
+<?php
+    if($popup == 1)
+    {
+        echo '<script>alert("Datele au fost adaugate cu succes in baza de date!")</script>'; 
+    }
+    else
+    {
+        if($popup == 0)
+        {
+            echo '<script>alert("Datele nu sunt valide!")</script>'; 
+        }
+    }
+?>
+
 @include('footer')
+
