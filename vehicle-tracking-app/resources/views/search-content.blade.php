@@ -9,8 +9,7 @@
         </div>
         <input type="radio" name="nr_inmat" id="nr_inmat">&nbsp;Numar inmatriculare&nbsp;
         <input type="radio" name = "nume_prop" id="nume_prop">&nbsp;Nume proprietar&nbsp;
-        <input type="radio" name = "data_inmat" id="data_inmat">&nbsp;Dupa o anumita data&nbsp;
-        <input type="radio" name = "data_itp" id="data_itp">&nbsp;ITP dupa o anumita data&nbsp;
+        <input type="radio" name = "nume_prop" id="nume_prop">&nbsp;&nbsp;
     </form>
     <div class="row product-list dev">
             @php

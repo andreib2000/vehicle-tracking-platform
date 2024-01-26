@@ -19,6 +19,6 @@ class HandleEditForm extends Controller
 
     public function prepareDataForForm()
     {
-        echo $this->datafromdb;
+        return $this->datafromdb[0];
     }
 }

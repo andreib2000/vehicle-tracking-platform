@@ -2,5 +2,5 @@ projectKey=Vehicle-Tracking-System
 serverUrl=http://localhost:9000
 serverVersion=9.9.3.79811
 dashboardUrl=http://localhost:9000/dashboard?id=Vehicle-Tracking-System
-ceTaskId=AYxD0EnS6szouH-xyJT7
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYxD0EnS6szouH-xyJT7
+ceTaskId=AY1Fo4XWdteY6jonaL-b
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AY1Fo4XWdteY6jonaL-b

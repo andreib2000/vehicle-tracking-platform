@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Providers\NewCode\GetDataFromDB;
 use App\Http\Controllers\HandleForm;
 use App\Http\Controllers\NewCode\ActionsInApp;
+use App\Http\Controllers\NewCode\SearchHandler;
+use Symfony\Component\Console\Input\Input;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +33,13 @@ Route::get('/adauga-vehicul', function () {
 });
 
 Route::post('/store', [HandleForm::class, 'store']);
+Route::post('/modify/{var}', [HandleForm::class, 'modify']);
 
 Route::get('/sterge/{var}', [ActionsInApp::class, 'deleteEntry']);
 Route::get('/editeaza/{var}', [ActionsInApp::class, 'editEntry']);
 
-Route::post('/search', [SearchHandler::class, 'config']);
+Route::get('/search', [SearchHandler::class, 'config']);
+
+Route::get('/searched-content', function (Request $request) {
+    echo $request[0]->model;
+})->name('searched-content');
